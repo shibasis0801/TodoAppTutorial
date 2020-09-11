@@ -1,0 +1,27 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Learn html, css, js, ts by building a todo application ",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm i -g browser-sync",
+    "start-basic": "browser-sync start --server --files \"css/*.css, js/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibasis0801/TodoAppTutorial.git"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Shibasis Patnaik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shibasis0801/TodoAppTutorial/issues"
+  },
+  "homepage": "https://github.com/shibasis0801/TodoAppTutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
