@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Tasker</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/task-item.css">
 </head>
 <!-- Embed video -->
 <!--< iframe-->
@@ -15,13 +17,28 @@
         </nav>
     </header>
     <main class="container">
-        <article>
-            <section id="list-item">
-            </section>
-            <section>
+        <section class="task-section">
+            <h2 class="task-section-header">Completed Tasks</h2>
+            <ul class="task-items" id="completed-tasks-list">
+            </ul>
+        </section>
 
-            </section>
-        </article>
+        <section class="task-section">
+            <h2 class="task-section-header">Pending Tasks</h2>
+            <ul class="task-items" id="pending-tasks-list">
+                <li id="task">
+                    <div class="task-item">
+                        <h3 class="task-header">
+                            This is the title
+                        </h3>
+                        <p class="task-body">
+                            This is the description for the todo item that you will have added using the input box below.
+                        </p>
+                        <input id="task-checkbox" type="checkbox" class="task-checkbox"/>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </main>
     <footer class="footer">
         <h2>Tasker</h2>

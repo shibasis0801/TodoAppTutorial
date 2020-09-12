@@ -1,0 +1,14 @@
+.task-section {
+    padding: 48px 0;
+}
+
+
+.task-items {
+    list-style-type: none;
+}
+
+.task-section-header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}

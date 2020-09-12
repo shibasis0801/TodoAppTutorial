@@ -1,10 +1,13 @@
-function text(content) {
-    return document.createTextNode(content);
-}
+const text = content => document.createTextNode(content);
 
 // Show eloquent JS diagram
-export function listItem() {
+/**
+ *
+ * @param {HTMLElement} node
+ * @returns {HTMLLIElement}
+ */
+export function listItem(node) {
     const listItem = document.createElement('li');
-    listItem.appendChild(text("Hello Todo"));
+    listItem.appendChild(node);
     return listItem;
 }

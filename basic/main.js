@@ -1,4 +1,14 @@
-import {listItem} from "./js/components.js";
+const pendingTasks = document.getElementById("pending-tasks-list");
+const completedTasks = document.getElementById("completed-tasks-list");
 
-const section = document.getElementById("list-item");
-section.appendChild(listItem());
+const task = document.getElementById("task");
+const checkbox = document.getElementById("task-checkbox");
+
+checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+        completedTasks.appendChild(task);
+    }
+    else {
+        pendingTasks.appendChild(task);
+    }
+})
