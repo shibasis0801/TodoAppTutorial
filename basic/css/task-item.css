@@ -2,13 +2,14 @@
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: 40% 60%;
-}
-
-.task-item {
     padding: 16px;
     border: 2px solid var(--off-base);
     border-radius: 2px;
     box-shadow: 2px 4px 4px 2px var(--shadow);
+}
+
+.task-item + .task-item {
+    margin: 16px 0;
 }
 
 .task-item .task-header {
@@ -35,4 +36,5 @@
     height: 32px;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
 }
