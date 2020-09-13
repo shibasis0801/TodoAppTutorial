@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/task-item.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/task-input.css">
 </head>
 <!-- Embed video -->
 <!--< iframe-->
@@ -41,6 +42,24 @@
         </div>
     </header>
     <main class="container">
+        <section class="task-section">
+            <form action="" method="" class="task-input">
+                <div>
+                    <label for="task-input-title"> Please enter title </label>
+                    <input id="task-input-title" class="gray-border" type="text">
+                </div>
+                <div>
+                    <label for="task-input-description"> Please enter description </label>
+                    <textarea id="task-input-description" class="gray-border" placeholder="Description"> </textarea>
+                </div>
+                <div class="form-button">
+                    <button type="submit" id="task-input-submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </section>
+
         <section class="task-section">
             <h2 class="task-section-header">Completed Tasks</h2>
             <ul class="task-items" id="completed-tasks-list">
