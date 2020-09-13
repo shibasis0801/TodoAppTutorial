@@ -20,7 +20,6 @@
     grid-column: 1 / span 3;
     display: flex;
     justify-content: space-around;
-    align-content: center;
 }
 
 .container {
@@ -32,6 +31,8 @@
     background-color: var(--primary);
     grid-row: 3;
     grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
 }
 
 /* https://www.materialpalette.com/indigo/pink */

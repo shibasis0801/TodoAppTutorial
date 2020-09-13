@@ -1,0 +1,6 @@
+.footer h2 {
+    color: var(--off-base);
+    align-self: center;
+    font-weight: 400;
+    font-size: 20px;
+}
