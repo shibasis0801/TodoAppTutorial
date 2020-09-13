@@ -34,7 +34,6 @@
     grid-column: 2;
     width: 32px;
     height: 32px;
-    justify-self: center;
-    align-self: center;
+    place-self: center;
     cursor: pointer;
 }

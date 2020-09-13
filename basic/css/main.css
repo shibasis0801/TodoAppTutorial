@@ -1,3 +1,4 @@
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
 .app {
     font-family: "Roboto", serif;
     height: 100vh;
@@ -11,10 +12,15 @@
     background-color: var(--base);
 }
 
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .header {
     background-color: var(--primary-dark);
+    color: var(--off-base);
     grid-row: 1;
     grid-column: 1 / span 3;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .container {
@@ -47,4 +53,12 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+input:focus {
+    outline: 0;
+}
+button:focus {
+    outline: 0;
 }

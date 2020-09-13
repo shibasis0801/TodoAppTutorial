@@ -1,4 +1,5 @@
 import {text, checkbox, header, listItem, body} from "./js/components.js";
+import {registerSearchListener} from "./js/search.js";
 
 const pendingTasks = document.getElementById("pending-tasks-list");
 const completedTasks = document.getElementById("completed-tasks-list");
@@ -27,4 +28,10 @@ arr.forEach(n => {
             pendingTasks.appendChild(task);
         }
     });
+});
+
+registerSearchListener(term => {
+    const defaultReply = "Please enter a query";
+    const reply = term ? `You asked for ${term}` : defaultReply;
+    alert(reply);
 });

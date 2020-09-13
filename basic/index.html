@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <title>Tasker</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/container.css">
     <link rel="stylesheet" href="./css/task-item.css">
+    <link rel="stylesheet" href="./css/header.css">
 </head>
 <!-- Embed video -->
 <!--< iframe-->
 <body class="app">
     <header class="header">
-        <nav>
-
+        <h1 class="main-header">Tasker</h1>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li class="main-nav-link">
+                    Home
+                </li>
+                <li class="main-nav-link">
+                    Dummy
+                </li>
+                <li class="main-nav-link">
+                    Tutorial
+                </li>
+                <li class="main-nav-link">
+                    About
+                </li>
+            </ul>
         </nav>
+        <!-- https://codeconvey.com/css-search-box-with-icon-inside -->
+        <div class="main-search">
+            <input id="search-input" type="text" class="input">
+            <button id="search-button" type="submit" class="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
     </header>
     <main class="container">
         <section class="task-section">
