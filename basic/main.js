@@ -1,5 +1,6 @@
 import {text, checkbox, header, listItem, body} from "./js/components.js";
 import {registerSearchListener} from "./js/search.js";
+import {registerFormHandler} from "./js/formHandling.js";
 
 const pendingTasks = document.getElementById("pending-tasks-list");
 const completedTasks = document.getElementById("completed-tasks-list");
@@ -35,3 +36,8 @@ registerSearchListener(term => {
     const reply = term ? `You asked for ${term}` : defaultReply;
     alert(reply);
 });
+
+
+registerFormHandler(formData => {
+    console.log(formData);
+})
