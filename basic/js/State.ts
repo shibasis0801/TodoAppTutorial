@@ -14,11 +14,17 @@ export default class TaskState {
         }
         this.renderFunction = renderFunction;
         this.persistence = persistence;
+
+        this.initialize = this.initialize.bind(this);
+        this.setState = this.setState.bind(this);
+        this.add = this.add.bind(this);
+        this.markPending = this.markPending.bind(this);
+        this.markComplete = this.markComplete.bind(this);
     }
 
     initialize() {
         this.persistence.retrieve()
-            .then(this.renderFunction);
+            .then(this.setState);
     }
 
     setState(newState: State) {

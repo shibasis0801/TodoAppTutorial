@@ -3,17 +3,7 @@ import {registerSearchListener} from "./js/search.js";
 import {registerFormHandler} from "./js/formHandling.js";
 import TaskState, {Task} from "./js/State.js";
 import IDBPersistence from "./js/idbPersistence.js";
-
-// const persistence = new IDBPersistence();
-//
-// persistence.store({
-//     pendingTasks: [],
-//     completedTasks: [{
-//         id: 321412,
-//         title: "Shibasis",
-//         description: "I am the author of this tutorial"
-//     }]
-// });
+import ServerPersistence from "./js/serverPersistence.js";
 
 const pendingTasks = document.getElementById("pending-tasks-list");
 const completedTasks = document.getElementById("completed-tasks-list");
@@ -59,7 +49,7 @@ function render(state) {
     })
 }
 
-const state = new TaskState(render, new IDBPersistence());
+const state = new TaskState(render, new ServerPersistence());
 state.initialize()
 
 registerSearchListener(term => {
