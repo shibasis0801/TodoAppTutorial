@@ -2,6 +2,18 @@ import {text, checkbox, header, listItem, body} from "./js/components.js";
 import {registerSearchListener} from "./js/search.js";
 import {registerFormHandler} from "./js/formHandling.js";
 import TaskState, {Task} from "./js/State.js";
+import IDBPersistence from "./js/idbPersistence.js";
+
+// const persistence = new IDBPersistence();
+//
+// persistence.store({
+//     pendingTasks: [],
+//     completedTasks: [{
+//         id: 321412,
+//         title: "Shibasis",
+//         description: "I am the author of this tutorial"
+//     }]
+// });
 
 const pendingTasks = document.getElementById("pending-tasks-list");
 const completedTasks = document.getElementById("completed-tasks-list");
@@ -47,25 +59,8 @@ function render(state) {
     })
 }
 
-const state = new TaskState(render);
-
-
-// const arr = [1, 2, 3, 4, 5]
-// arr.forEach(n => {
-//     pendingTasks.appendChild(
-//         renderTask(n)
-//     );
-//     const cb = document.getElementById(`checkbox-${n}`);
-//     const task = document.getElementById(`list-${n}`);
-//     cb.addEventListener('change', () => {
-//         if (cb.checked) {
-//             completedTasks.appendChild(task);
-//         }
-//         else {
-//             pendingTasks.appendChild(task);
-//         }
-//     });
-// });
+const state = new TaskState(render, new IDBPersistence());
+state.initialize()
 
 registerSearchListener(term => {
     const defaultReply = "Please enter a query";

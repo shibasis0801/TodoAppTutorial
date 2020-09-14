@@ -4,7 +4,7 @@
   "description": "Learn html, css, js, ts by building a todo application ",
   "main": "index.js",
   "scripts": {
-    "install": "npm i -g browser-sync",
+    "install": "npm i -g browser-sync typescript",
     "start-basic": "cd basic && browser-sync start --server --files \"css/*.css, js/*.js\""
   },
   "repository": {
