@@ -5,7 +5,7 @@ import { get, set } from 'https://cdn.jsdelivr.net/npm/idb-keyval@3/dist/idb-key
 
 export default class IDBPersistence implements Persistence {
     retrieve(): Promise<State> {
-        return get('app');
+        return get('app').then((val: any) => (val || {pendingTasks: [], completedTasks: []}));
     }
 
     store(data: State) {
