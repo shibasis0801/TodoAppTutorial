@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/task-item.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/task-input.css">
+</head>
+<!-- Embed video -->
+<!--< iframe-->
+<body class="app">
+    <header class="header">
+        <h1 class="main-header">Tasker</h1>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li class="main-nav-link">
+                    Home
+                </li>
+                <li class="main-nav-link">
+                    Dummy
+                </li>
+                <li class="main-nav-link">
+                    Tutorial
+                </li>
+                <li class="main-nav-link">
+                    About
+                </li>
+            </ul>
+        </nav>
+        <!-- https://codeconvey.com/css-search-box-with-icon-inside -->
+        <div class="main-search">
+            <input id="search-input" type="text" class="input">
+            <button id="search-button" type="submit" class="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="task-section">
+            <form id="task-input-form" action="#" class="task-input">
+                <div>
+                    <label for="task-input-title"> Please enter title </label>
+                    <input name="title" id="task-input-title" class="gray-border" type="text" placeholder="Title"/>
+                </div>
+                <div>
+                    <label for="task-input-description"> Please enter description </label>
+                    <textarea name="description" id="task-input-description" class="gray-border" placeholder="Description"></textarea>
+                </div>
+                <div class="form-button">
+                    <button type="submit" id="task-input-submit">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2 class="task-section-header">Completed Tasks</h2>
+            <ul class="task-items" id="completed-tasks-list">
+            </ul>
+        </section>
+
+        <section class="task-section">
+            <h2 class="task-section-header">Pending Tasks</h2>
+            <ul class="task-items" id="pending-tasks-list">
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2>! &copy; with NaReal license</h2>
+    </footer>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
