@@ -7,12 +7,8 @@ import {SQLite} from "./database";
 const app = express();
 const database = new SQLite();
 
-const corsOptions = {
-    origin: "http://localhost:3000"
-}
-
 app.use(morgan('dev'));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json())
 
 app.get('/tasks/retrieve', (req: Request, res: Response) => {
