@@ -12,7 +12,7 @@ const corsOptions = {
 }
 
 app.use(morgan('dev'));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json())
 
 app.get('/tasks/retrieve', (req: Request, res: Response) => {
