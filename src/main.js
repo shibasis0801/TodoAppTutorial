@@ -1,6 +1,7 @@
 import {registerSearchListener} from "./js/search.js";
 import {registerFormHandler} from "./js/formHandling.js";
 import {checkbox, listItem, body, header, text} from "./js/components.js";
+import {helloWorld} from "./js/Persistence.js";
 
 const pendingTasks = document.getElementById("pending-tasks-list");
 const completedTasks = document.getElementById("completed-tasks-list");
@@ -33,6 +34,7 @@ registerSearchListener(term => {
     const defaultReply = "Please enter a query";
     const reply = term ? `You asked for ${term}` : defaultReply;
     alert(reply);
+    helloWorld();
 });
 
 registerFormHandler(formData => {

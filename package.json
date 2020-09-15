@@ -8,7 +8,7 @@
     "start-api": "cd server && tsc && node index.js",
     "start-ui": "cd basic/js && tsc && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\"",
     "start": "cd src && browser-sync start --server --files \"css/*.css, js/*.js\"",
-    "start-ts": "cd src/js && tsc && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\""
+    "start-ts": "cd src/js && tsc --watch && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\""
   },
   "repository": {
     "type": "git",
