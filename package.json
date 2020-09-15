@@ -6,7 +6,8 @@
   "scripts": {
     "install": "npm i -g browser-sync typescript",
     "start-api": "cd server && tsc && node index.js",
-    "start-ui": "cd basic/js && tsc && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\""
+    "start-ui": "cd basic/js && tsc && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\"",
+    "start": "cd src/js && tsc && cd .. && browser-sync start --server --files \"css/*.css, js/*.js\""
   },
   "repository": {
     "type": "git",
