@@ -10,28 +10,6 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var database_1 = require("./database");
 var app = express_1.default();
 var database = new database_1.SQLite();
-// const state: State = {
-//     pendingTasks: [
-//         {
-//             id: 213,
-//             title: "Sfafs",
-//             description: "fsfsafsafas"
-//         }
-//     ],
-//     completedTasks: [
-//         {
-//             id: 3412213,
-//             title: "fasfsasSfafs",
-//             description: "vcxbxcvbcfsfsafsafas"
-//         }
-//     ]
-//
-// }
-// database.store(state)
-//     .then(() => {
-//         database.retrieve()
-//             .then(value => console.log(value))
-//     })
 var corsOptions = {
     origin: "http://localhost:3000"
 };
@@ -41,6 +19,7 @@ app.use(body_parser_1.default.json());
 app.get('/tasks/retrieve', function (req, res) {
     database.retrieve()
         .then(function (value) {
+        console.log(value);
         res.status(200).json(value);
     });
 });

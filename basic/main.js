@@ -49,7 +49,7 @@ function render(state) {
     })
 }
 
-const state = new TaskState(render, new IDBPersistence());
+const state = new TaskState(render, new ServerPersistence());
 state.initialize()
 
 registerSearchListener(term => {
