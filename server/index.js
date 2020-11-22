@@ -14,7 +14,7 @@ var corsOptions = {
     origin: "http://localhost:3000"
 };
 app.use(morgan_1.default('dev'));
-app.use(cors_1.default(corsOptions));
+app.use(cors_1.default());
 app.use(body_parser_1.default.json());
 app.get('/tasks/retrieve', function (req, res) {
     database.retrieve()
